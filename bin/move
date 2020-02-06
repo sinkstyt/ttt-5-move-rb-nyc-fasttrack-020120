@@ -1,5 +1,18 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/move.rb'
+require 'pry'
 
 # Code your CLI Here
+board = Array.new(9," ")
+puts "Welcome to Tic Tac Toe!"
+
+puts "Where would you like to go?"
+display_board(board) #I'm calling the display_board method here.
+
+their_move = get_move
+
+move(board, get_move, "X")
+display_board(board)
+
+binding.pry
